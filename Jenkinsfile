@@ -19,10 +19,10 @@ pipeline {
     }
     post {
         success {
-            discordSend description: "Build Success", footer: "Filebeat Service", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: env.SOCAAS_WEBHOOK
+            discordSend description: "Build Success", footer: "Docker UI Service", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: env.SOCAAS_WEBHOOK
         }
         failure {
-            discordSend description: "Build Failed", footer: "Filebeat Service", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: env.SOCAAS_WEBHOOK
+            discordSend description: "Build Failed", footer: "Docker UI Service", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: env.SOCAAS_WEBHOOK
         }
     }
 }
